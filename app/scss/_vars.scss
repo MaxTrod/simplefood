@@ -1,0 +1,53 @@
+$orange-900: #ff6838;
+$silver-200: #ececec;
+$gray: #c2c2c2;
+$darkBlue-900: #363853;
+$dark: #31352b;
+$silver-100: #f9faff;
+
+%Rubik-300 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 300;
+}
+
+%Rubik-400 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+}
+
+%Rubik-500 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+}
+
+%Rubik-italic {
+  font-family: 'Rubik', sans-serif;
+  font-style: italic;
+}
+
+%svg-color {
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+%link {
+  transition: box-shadow 0.3s, color 0.3s;
+  &:focus {
+    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+  }
+  @media (any-hover: hover) {
+    &:hover {
+      color: $orange-900;
+    }
+  }
+  &:active {
+    box-shadow: none;
+    // text-shadow: 2px 2px 5px 0 rgba(49, 53, 43, 0.5);
+    //не работает
+  }
+}
+

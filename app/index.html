@@ -1,13 +1,561 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Simplefood shop | Главная страница</title>
   <link href="css/style.min.css" rel="stylesheet">
 </head>
+
 <body>
-  
+
+  <div class="wrapper">
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <a class="logo header__logo" href="#">
+            <img class="logo__img" src="images/logo.svg" width="200" height="39" alt="Логотип">
+          </a>
+
+          <nav class="menu">
+            <button class="menu__icon icon-menu" aria-label="открыть меню" type="button">
+              <span class="icon-menu__line"></span>
+            </button>
+            <div class="menu__body">
+              <div class="menu__top">
+                <a class="logo" href="">
+                  <img class="logo__img" src="images/logo.svg" alt="Логотип">
+                </a>
+                <button class="menu__close-button" aria-label="закрыть меню" type="button"></button>
+              </div>
+
+              <ul class="menu__nav-list">
+                <li class="menu__nav-item">
+                  <a class="menu__nav-link" href="#" target="_blank" rel="noopener noreferrer">Главная</a>
+                </li>
+                <li class="menu__nav-item">
+                  <a class="menu__nav-link" href="#" target="_blank" rel="noopener noreferrer">Блюда</a>
+                </li>
+                <li class="menu__nav-item">
+                  <a class="menu__nav-link" href="#" target="_blank" rel="noopener noreferrer">Контакты</a>
+                </li>
+              </ul>
+
+              <div class="menu__contacts contacts-menu">
+                <a class="contacts-menu__link contacts-menu__link--location" href="#">ул. Т.Г. Шевченко, 1</a>
+                <a class="contacts-menu__link contacts-menu__link--phone" href="tel:380501112233">380501112233</a>
+                <a class="contacts-menu__link contacts-menu__link--email" href="mailto:support@sfood.com">support@sfood.com</a>
+
+                <div class="contacts-menu__social">
+                  <a class="contacts-menu__social-link" href="#" target="_blank" rel="noopener noreferrer"></a>
+                  <a class="contacts-menu__social-link" href="#" target="_blank" rel="noopener noreferrer"></a>
+                  <a class="contacts-menu__social-link" href="#" target="_blank" rel="noopener noreferrer"></a>
+                </div>
+              </div>
+
+            </div>
+          </nav>
+
+          <div class="user-actions">
+            <a class="user-actions__link user-actions__link--search" href="#" aria-label="поиск по сайту"></a>
+
+            <a class="user-actions__link user-actions__link--cart" href="#" aria-label="корзина товара">
+              <span class="user-actions__link-quantity">4</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="page">
+      <section class="hero">
+        <div class="container">
+          <div class="hero__inner">
+            <div class="hero__content">
+              <h1 class="hero__title">
+                Доставка
+                <span class="hero__text-orange">за 15 минут</span>
+              </h1>
+
+              <p class="hero__text">
+                Самый быстрый сервис доставки еды в вашем городе. Не уложимся в срок - доставка за наш счёт
+              </p>
+
+              <div class="hero__actions">
+                <a class="hero__button btn" href="#">Заказать</a>
+                <a class="hero__link link" href="">Подробнее</a>
+              </div>
+            </div>
+
+            <img class="hero__image" src="images/hero/delivery-guy.png" alt="Сотрудник доставки">
+          </div>
+        </div>
+      </section>
+
+      <section class="categories">
+        <div class="container">
+          <div class="categories__header">
+            <h2 class="categories__title title title--center">Популярные категории </h2>
+            <nav class="nav-categories">
+              <button class="nav-categories__item active-tab" type="submit">
+                <span class="nav-categories__text">Бургеры</span>
+              </button>
+
+              <button class="nav-categories__item" type="submit">
+                <span class="nav-categories__text">Пицца</span>
+              </button>
+
+              <button class="nav-categories__item" type="submit">
+                <span class="nav-categories__text">Сендвичи</span>
+              </button>
+
+              <button class="nav-categories__item" type="submit">
+                <span class="nav-categories__text">Азиатская кухня</span>
+              </button>
+
+              <button class="nav-categories__item" type="submit">
+                <span class="nav-categories__text">Cеты</span>
+              </button>
+            </nav>
+          </div>
+          <div class="categories__content">
+            <div class="categories__tab active-tab">
+                <div class="categories__body">
+                  <article class="tab-card">
+                    <a class="tab-card__picture" href="#">
+                      <img class="tab-card__image" src="images/categories/01.png" alt="Чизбургер">
+                    </a>
+                    <a class="tab-card__link-title" href="#">
+                      <h3 class="tab-card__title">Чизбургер с листьями салата</h3>
+                    </a>
+                    <span class="tab-card__price">160 грн.</span>
+                    <button class="tab-card__button btn">В корзину</button>
+                  </article>
+                  <article class="tab-card">
+                    <a class="tab-card__picture" href="#">
+                      <img class="tab-card__image" src="images/categories/01.png" alt="Чизбургер">
+                    </a>
+                    <a class="tab-card__link-title" href="#">
+                      <h3 class="tab-card__title">Чизбургер с листьями салата</h3>
+                    </a>
+                    <span class="tab-card__price">160 грн.</span>
+                    <button class="tab-card__button btn">В корзину</button>
+                  </article>
+                  <article class="tab-card">
+                    <a class="tab-card__picture" href="#">
+                      <img class="tab-card__image" src="images/categories/01.png" alt="Чизбургер">
+                    </a>
+                    <a class="tab-card__link-title" href="#">
+                      <h3 class="tab-card__title">Чизбургер с листьями салата</h3>
+                    </a>
+                    <span class="tab-card__price">160 грн.</span>
+                    <button class="tab-card__button btn">В корзину</button>
+                  </article>
+                  <article class="tab-card">
+                    <a class="tab-card__picture" href="#">
+                      <img class="tab-card__image" src="images/categories/01.png" alt="Чизбургер">
+                    </a>
+                    <a class="tab-card__link-title" href="#">
+                      <h3 class="tab-card__title">Чизбургер с листьями салата</h3>
+                    </a>
+                    <span class="tab-card__price">160 грн.</span>
+                    <button class="tab-card__button btn">В корзину</button>
+                  </article>
+                  <article class="tab-card">
+                    <a class="tab-card__picture" href="#">
+                      <img class="tab-card__image" src="images/categories/01.png" alt="Чизбургер">
+                    </a>
+                    <a class="tab-card__link-title" href="#">
+                      <h3 class="tab-card__title">Чизбургер с листьями салата</h3>
+                    </a>
+                    <span class="tab-card__price">160 грн.</span>
+                    <button class="tab-card__button btn">В корзину</button>
+                  </article>
+                  <article class="tab-card">
+                    <a class="tab-card__picture" href="#">
+                      <img class="tab-card__image" src="images/categories/01.png" alt="Чизбургер">
+                    </a>
+                    <a class="tab-card__link-title" href="#">
+                      <h3 class="tab-card__title">Чизбургер с листьями салата</h3>
+                    </a>
+                    <span class="tab-card__price">160 грн.</span>
+                    <button class="tab-card__button btn">В корзину</button>
+                  </article>
+                  <article class="tab-card">
+                    <a class="tab-card__picture" href="#">
+                      <img class="tab-card__image" src="images/categories/01.png" alt="Чизбургер">
+                    </a>
+                    <a class="tab-card__link-title" href="#">
+                      <h3 class="tab-card__title">Чизбургер с листьями салата</h3>
+                    </a>
+                    <span class="tab-card__price">160 грн.</span>
+                    <button class="tab-card__button btn">В корзину</button>
+                  </article>
+                  <article class="tab-card">
+                    <a class="tab-card__picture" href="#">
+                      <img class="tab-card__image" src="images/categories/01.png" alt="Чизбургер">
+                    </a>
+                    <a class="tab-card__link-title" href="#">
+                      <h3 class="tab-card__title">Чизбургер с листьями салата</h3>
+                    </a>
+                    <span class="tab-card__price">160 грн.</span>
+                    <button class="tab-card__button btn">В корзину</button>
+                  </article>
+                  <article class="tab-card">
+                    <a class="tab-card__picture" href="#">
+                      <img class="tab-card__image" src="images/categories/01.png" alt="Чизбургер">
+                    </a>
+                    <a class="tab-card__link-title" href="#">
+                      <h3 class="tab-card__title">Чизбургер с листьями салата</h3>
+                    </a>
+                    <span class="tab-card__price">160 грн.</span>
+                    <button class="tab-card__button btn">В корзину</button>
+                  </article>
+                  <article class="tab-card">
+                    <a class="tab-card__picture" href="#">
+                      <img class="tab-card__image" src="images/categories/01.png" alt="Чизбургер">
+                    </a>
+                    <a class="tab-card__link-title" href="#">
+                      <h3 class="tab-card__title">Чизбургер с листьями салата</h3>
+                    </a>
+                    <span class="tab-card__price">160 грн.</span>
+                    <button class="tab-card__button btn">В корзину</button>
+                  </article>
+                </div>
+            </div>
+
+            <div class="categories__tab">
+              <div class="categories__body">
+                <article class="tab-card">
+                  <a class="tab-card__picture" href="#">
+                    <img class="tab-card__image" src="images/categories/01.png" alt="Чизбургер">
+                  </a>
+                  <a class="tab-card__link-title" href="#">
+                    <h3 class="tab-card__title">Чизбургер с листьями салата</h3>
+                  </a>
+                  <span class="tab-card__price">160 грн.</span>
+                  <button class="tab-card__button btn">В корзину</button>
+                </article>
+                <article class="tab-card">
+                  <a class="tab-card__picture" href="#">
+                    <img class="tab-card__image" src="images/categories/01.png" alt="Чизбургер">
+                  </a>
+                  <a class="tab-card__link-title" href="#">
+                    <h3 class="tab-card__title">Чизбургер с листьями салата</h3>
+                  </a>
+                  <span class="tab-card__price">160 грн.</span>
+                  <button class="tab-card__button btn">В корзину</button>
+                </article>
+                <article class="tab-card">
+                  <a class="tab-card__picture" href="#">
+                    <img class="tab-card__image" src="images/categories/01.png" alt="Чизбургер">
+                  </a>
+                  <a class="tab-card__link-title" href="#">
+                    <h3 class="tab-card__title">Чизбургер с листьями салата</h3>
+                  </a>
+                  <span class="tab-card__price">160 грн.</span>
+                  <button class="tab-card__button btn">В корзину</button>
+                </article>
+                <article class="tab-card">
+                  <a class="tab-card__picture" href="#">
+                    <img class="tab-card__image" src="images/categories/01.png" alt="Чизбургер">
+                  </a>
+                  <a class="tab-card__link-title" href="#">
+                    <h3 class="tab-card__title">Чизбургер с листьями салата</h3>
+                  </a>
+                  <span class="tab-card__price">160 грн.</span>
+                  <button class="tab-card__button btn">В корзину</button>
+                </article>
+                <article class="tab-card">
+                  <a class="tab-card__picture" href="#">
+                    <img class="tab-card__image" src="images/categories/01.png" alt="Чизбургер">
+                  </a>
+                  <a class="tab-card__link-title" href="#">
+                    <h3 class="tab-card__title">Чизбургер с листьями салата</h3>
+                  </a>
+                  <span class="tab-card__price">160 грн.</span>
+                  <button class="tab-card__button btn">В корзину</button>
+                </article>
+                <article class="tab-card">
+                  <a class="tab-card__picture" href="#">
+                    <img class="tab-card__image" src="images/categories/01.png" alt="Чизбургер">
+                  </a>
+                  <a class="tab-card__link-title" href="#">
+                    <h3 class="tab-card__title">Чизбургер с листьями салата</h3>
+                  </a>
+                  <span class="tab-card__price">160 грн.</span>
+                  <button class="tab-card__button btn">В корзину</button>
+                </article>
+                <article class="tab-card">
+                  <a class="tab-card__picture" href="#">
+                    <img class="tab-card__image" src="images/categories/01.png" alt="Чизбургер">
+                  </a>
+                  <a class="tab-card__link-title" href="#">
+                    <h3 class="tab-card__title">Чизбургер с листьями салата</h3>
+                  </a>
+                  <span class="tab-card__price">160 грн.</span>
+                  <button class="tab-card__button btn">В корзину</button>
+                </article>
+                <article class="tab-card">
+                  <a class="tab-card__picture" href="#">
+                    <img class="tab-card__image" src="images/categories/01.png" alt="Чизбургер">
+                  </a>
+                  <a class="tab-card__link-title" href="#">
+                    <h3 class="tab-card__title">Чизбургер с листьями салата</h3>
+                  </a>
+                  <span class="tab-card__price">160 грн.</span>
+                  <button class="tab-card__button btn">В корзину</button>
+                </article>
+                <article class="tab-card">
+                  <a class="tab-card__picture" href="#">
+                    <img class="tab-card__image" src="images/categories/01.png" alt="Чизбургер">
+                  </a>
+                  <a class="tab-card__link-title" href="#">
+                    <h3 class="tab-card__title">Чизбургер с листьями салата</h3>
+                  </a>
+                  <span class="tab-card__price">160 грн.</span>
+                  <button class="tab-card__button btn">В корзину</button>
+                </article>
+              </div>
+            </div>
+
+            <div class="categories__tab">
+              <div class="categories__body">
+                <article class="tab-card">
+                  <a class="tab-card__picture" href="#">
+                    <img class="tab-card__image" src="images/categories/01.png" alt="Чизбургер">
+                  </a>
+                  <a class="tab-card__link-title" href="#">
+                    <h3 class="tab-card__title">Чизбургер с листьями салата</h3>
+                  </a>
+                  <span class="tab-card__price">160 грн.</span>
+                  <button class="tab-card__button btn">В корзину</button>
+                </article>
+                <article class="tab-card">
+                  <a class="tab-card__picture" href="#">
+                    <img class="tab-card__image" src="images/categories/01.png" alt="Чизбургер">
+                  </a>
+                  <a class="tab-card__link-title" href="#">
+                    <h3 class="tab-card__title">Чизбургер с листьями салата</h3>
+                  </a>
+                  <span class="tab-card__price">160 грн.</span>
+                  <button class="tab-card__button btn">В корзину</button>
+                </article>
+                <article class="tab-card">
+                  <a class="tab-card__picture" href="#">
+                    <img class="tab-card__image" src="images/categories/01.png" alt="Чизбургер">
+                  </a>
+                  <a class="tab-card__link-title" href="#">
+                    <h3 class="tab-card__title">Чизбургер с листьями салата</h3>
+                  </a>
+                  <span class="tab-card__price">160 грн.</span>
+                  <button class="tab-card__button btn">В корзину</button>
+                </article>
+                <article class="tab-card">
+                  <a class="tab-card__picture" href="#">
+                    <img class="tab-card__image" src="images/categories/01.png" alt="Чизбургер">
+                  </a>
+                  <a class="tab-card__link-title" href="#">
+                    <h3 class="tab-card__title">Чизбургер с листьями салата</h3>
+                  </a>
+                  <span class="tab-card__price">160 грн.</span>
+                  <button class="tab-card__button btn">В корзину</button>
+                </article>
+                <article class="tab-card">
+                  <a class="tab-card__picture" href="#">
+                    <img class="tab-card__image" src="images/categories/01.png" alt="Чизбургер">
+                  </a>
+                  <a class="tab-card__link-title" href="#">
+                    <h3 class="tab-card__title">Чизбургер с листьями салата</h3>
+                  </a>
+                  <span class="tab-card__price">160 грн.</span>
+                  <button class="tab-card__button btn">В корзину</button>
+                </article>
+                <article class="tab-card">
+                  <a class="tab-card__picture" href="#">
+                    <img class="tab-card__image" src="images/categories/01.png" alt="Чизбургер">
+                  </a>
+                  <a class="tab-card__link-title" href="#">
+                    <h3 class="tab-card__title">Чизбургер с листьями салата</h3>
+                  </a>
+                  <span class="tab-card__price">160 грн.</span>
+                  <button class="tab-card__button btn">В корзину</button>
+                </article>
+                <article class="tab-card">
+                  <a class="tab-card__picture" href="#">
+                    <img class="tab-card__image" src="images/categories/01.png" alt="Чизбургер">
+                  </a>
+                  <a class="tab-card__link-title" href="#">
+                    <h3 class="tab-card__title">Чизбургер с листьями салата</h3>
+                  </a>
+                  <span class="tab-card__price">160 грн.</span>
+                  <button class="tab-card__button btn">В корзину</button>
+                </article>
+              </div>
+            </div>
+
+            <div class="categories__tab">
+              <div class="categories__body">
+                <article class="tab-card">
+                  <a class="tab-card__picture" href="#">
+                    <img class="tab-card__image" src="images/categories/01.png" alt="Чизбургер">
+                  </a>
+                  <a class="tab-card__link-title" href="#">
+                    <h3 class="tab-card__title">Чизбургер с листьями салата</h3>
+                  </a>
+                  <span class="tab-card__price">160 грн.</span>
+                  <button class="tab-card__button btn">В корзину</button>
+                </article>
+                <article class="tab-card">
+                  <a class="tab-card__picture" href="#">
+                    <img class="tab-card__image" src="images/categories/01.png" alt="Чизбургер">
+                  </a>
+                  <a class="tab-card__link-title" href="#">
+                    <h3 class="tab-card__title">Чизбургер с листьями салата</h3>
+                  </a>
+                  <span class="tab-card__price">160 грн.</span>
+                  <button class="tab-card__button btn">В корзину</button>
+                </article>
+                <article class="tab-card">
+                  <a class="tab-card__picture" href="#">
+                    <img class="tab-card__image" src="images/categories/01.png" alt="Чизбургер">
+                  </a>
+                  <a class="tab-card__link-title" href="#">
+                    <h3 class="tab-card__title">Чизбургер с листьями салата</h3>
+                  </a>
+                  <span class="tab-card__price">160 грн.</span>
+                  <button class="tab-card__button btn">В корзину</button>
+                </article>
+              </div>
+            </div>
+
+            <div class="categories__tab">
+              <div class="categories__body">
+                <article class="tab-card">
+                  <a class="tab-card__picture" href="#">
+                    <img class="tab-card__image" src="images/categories/01.png" alt="Чизбургер">
+                  </a>
+                  <a class="tab-card__link-title" href="#">
+                    <h3 class="tab-card__title">Чизбургер с листьями салата</h3>
+                  </a>
+                  <span class="tab-card__price">160 грн.</span>
+                  <button class="tab-card__button btn">В корзину</button>
+                </article>
+                <article class="tab-card">
+                  <a class="tab-card__picture" href="#">
+                    <img class="tab-card__image" src="images/categories/01.png" alt="Чизбургер">
+                  </a>
+                  <a class="tab-card__link-title" href="#">
+                    <h3 class="tab-card__title">Чизбургер с листьями салата</h3>
+                  </a>
+                  <span class="tab-card__price">160 грн.</span>
+                  <button class="tab-card__button btn">В корзину</button>
+                </article>
+              </div>
+            </div>
+          </div>
+          <a class="categories__link link" href="#">Показать еще</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="footer-top__inner">
+            <div class="footer-top__column">
+              <a class="logo footer-top__logo" href="#">
+                <img class="logo__img" src="images/logo.svg" width="200" height="39" alt="Логотип">
+              </a>
+              <form class="form-footer" action="#">
+                <input autocomplete="off" type="email" name="usermail" placeholder="Ваш email"
+                  class="form-footer__input" required>
+
+                <button class="form-footer__button btn btn--subscribe" type="submit">
+                  <span class="form-footer__button-text">Подписаться</span>
+                </button>
+              </form>
+            </div>
+
+            <ul class="footer-top__list">
+              <li class="footer-top__item">
+                <a class="footer-top__link" href="#" target="_blank" rel="noopener noreferrer">Как это работает</a>
+              </li>
+              <li class="footer-top__item">
+                <a class="footer-top__link" href="#" target="_blank" rel="noopener noreferrer">Продукты</a>
+              </li>
+              <li class="footer-top__item">
+                <a class="footer-top__link" href="#" target="_blank" rel="noopener noreferrer">Блюда</a>
+              </li>
+              <li class="footer-top__item">
+                <a class="footer-top__link" href="#" target="_blank" rel="noopener noreferrer">Меню</a>
+              </li>
+            </ul>
+
+            <ul class="footer-top__list">
+              <li class="footer-top__item">
+                <a class="footer-top__link" href="#" target="_blank" rel="noopener noreferrer">О нас</a>
+              </li>
+              <li class="footer-top__item">
+                <a class="footer-top__link" href="#" target="_blank" rel="noopener noreferrer">Новости</a>
+              </li>
+              <li class="footer-top__item">
+                <a class="footer-top__link" href="#" target="_blank" rel="noopener noreferrer">Партнеры</a>
+              </li>
+              <li class="footer-top__item">
+                <a class="footer-top__link" href="#" target="_blank" rel="noopener noreferrer">ЧаВо</a>
+              </li>
+            </ul>
+
+            <ul class="footer-top__list">
+              <li class="footer-top__item">
+                <a class="footer-top__link" href="#" target="_blank" rel="noopener noreferrer">Скачать приложение</a>
+              </li>
+              <li class="footer-top__item">
+                <a class="footer-top__link" href="#" target="_blank" rel="noopener noreferrer">Блог</a>
+              </li>
+              <li class="footer-top__item">
+                <a class="footer-top__link" href="#" target="_blank" rel="noopener noreferrer">Что нового?</a>
+              </li>
+              <li class="footer-top__item">
+                <a class="footer-top__link" href="#" target="_blank" rel="noopener noreferrer">Карта сайта</a>
+              </li>
+            </ul>
+
+            <div class="contacts-menu">
+              <a class="contacts-menu__link contacts-menu__link--location" href="#">ул. Т.Г. Шевченко, 1</a>
+              <a class="contacts-menu__link contacts-menu__link--phone" href="tel:380501112233">380501112233</a>
+              <a class="contacts-menu__link contacts-menu__link--email"
+                href="mailto:support@sfood.com">support@sfood.com</a>
+              <div class="contacts-menu__social">
+                <a class="contacts-menu__social-link" href="#" target="_blank" rel="noopener noreferrer" aria-label="ссылка на фейсбук">
+                  <svg>
+                    <use href="images/sprite.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+                <a class="contacts-menu__social-link" href="#" target="_blank" rel="noopener noreferrer" aria-label="ссылка на твиттер">
+                  <svg>
+                    <use href="images/sprite.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+                <a class="contacts-menu__social-link" href="#" target="_blank" rel="noopener noreferrer" aria-label="ссылка на инстаграм">
+                  <svg>
+                    <use href="images/sprite.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom__copy">© 2022 Simple Food</div>
+      </div>
+    </footer>
+  </div>
+
   <script src="js/main.min.js"></script>
 </body>
+
 </html>
