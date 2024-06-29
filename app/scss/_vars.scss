@@ -1,9 +1,15 @@
-$orange-900: #ff6838;
-$silver-200: #ececec;
-$gray: #c2c2c2;
-$darkBlue-900: #363853;
-$dark: #31352b;
-$silver-100: #f9faff;
+$main: #31352b;
+$title: #363853;
+$accent: #ff6838;
+
+$bg: #f9faff;
+$bg-secondary: #ececec;
+
+$icon: #fff;
+$icon-secondary: #fff2ed;
+
+$interactive: #c2c2c2;
+
 
 %Rubik-300 {
   font-family: 'Rubik', sans-serif;
@@ -34,20 +40,29 @@ $silver-100: #f9faff;
   mask-repeat: no-repeat;
 }
 
-%link {
-  transition: box-shadow 0.3s, color 0.3s;
-  &:focus {
-    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
-  }
-  @media (any-hover: hover) {
-    &:hover {
-      color: $orange-900;
-    }
-  }
-  &:active {
-    box-shadow: none;
-    // text-shadow: 2px 2px 5px 0 rgba(49, 53, 43, 0.5);
-    //не работает
-  }
+
+%pseudo {
+  position: absolute;
+  content: '';
+  display: block;
 }
+%pseudo-y {
+  position: absolute;
+  content: '';
+  display: block;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+%pseudo-xy {
+  position: absolute;
+  content: '';
+  display: block;
+  left: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
 
