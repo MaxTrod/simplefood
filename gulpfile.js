@@ -7,8 +7,8 @@ const imagemin = require("gulp-imagemin");
 const del = require("del");
 const browserSync = require("browser-sync").create();
 const svgSprite = require("gulp-svg-sprite");
-// const cheerio = require("gulp-cheerio");
-// const replace = require('gulp-replace');
+const cheerio = require("gulp-cheerio");
+const replace = require('gulp-replace');
 
 function browsersync() {
   browserSync.init({
@@ -34,7 +34,11 @@ function styles() {
 }
 
 function scripts() {
-  return src(["node_modules/jquery/dist/jquery.js", "app/js/main.js"])
+  return src([
+    "node_modules/swiper/swiper-bundle.js",
+    "node_modules/jquery/dist/jquery.js", 
+    "app/js/main.js",
+  ])
     .pipe(concat("main.min.js"))
     .pipe(uglify())
     .pipe(dest("app/js"))
@@ -69,18 +73,17 @@ function images() {
 function svgSprites() {
   return src("app/images/icons/*.svg")
 
-  //руинит некоторые иконки
-//   .pipe(cheerio({
-//     run: ($) => {
-//         $("[fill]").removeAttr("fill"); 
-//         $("[stroke]").removeAttr("stroke"); 
-//         $("[style]").removeAttr("style"); 
-//     },
-//     parserOptions: { xmlMode: true },
-//   })
-// )
+  .pipe(cheerio({
+    run: ($) => {
+        $("[fill]").removeAttr("fill"); 
+        $("[stroke]").removeAttr("stroke"); 
+        $("[style]").removeAttr("style"); 
+    },
+    parserOptions: { xmlMode: true },
+  })
+)
 
-//     .pipe(replace('&gt;','>')) 
+    .pipe(replace('&gt;','>')) 
 
     .pipe(
       svgSprite({
