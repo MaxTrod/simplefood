@@ -46,6 +46,7 @@ $interactive: #c2c2c2;
   content: '';
   display: block;
 }
+
 %pseudo-y {
   position: absolute;
   content: '';
@@ -54,6 +55,7 @@ $interactive: #c2c2c2;
   top: 50%;
   transform: translateY(-50%);
 }
+
 %pseudo-xy {
   position: absolute;
   content: '';
@@ -63,6 +65,3 @@ $interactive: #c2c2c2;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
-
-
