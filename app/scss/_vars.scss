@@ -4,6 +4,7 @@ $accent: #ff6838;
 
 $bg: #f9faff;
 $bg-secondary: #ececec;
+$bg-checkbox: #faeded;
 
 $icon: #fff;
 $icon-secondary: #fff2ed;
@@ -60,8 +61,15 @@ $interactive: #c2c2c2;
   position: absolute;
   content: '';
   display: block;
-  left: 0;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+%checkbox-hidden {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
 }

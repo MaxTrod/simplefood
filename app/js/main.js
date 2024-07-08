@@ -1,4 +1,66 @@
-$(function () {});
+$(function () {
+  $(".header-catalog__select").styler();
+
+  var $range = $(".filter-price__slider-input"),
+    $inputFrom = $(".filter-price__input--from"),
+    $inputTo = $(".filter-price__input--to"),
+    instance,
+    min = 0,
+    max = 1200,
+    from = 0,
+    to = 0;
+
+  $range.ionRangeSlider({
+    skin: "round",
+    type: "double",
+    min: min,
+    max: max,
+    from: 100,
+    to: 1000,
+    onStart: updateInputs,
+    onChange: updateInputs,
+  });
+  instance = $range.data("ionRangeSlider");
+
+  function updateInputs(data) {
+    from = data.from;
+    to = data.to;
+
+    $inputFrom.prop("value", from);
+    $inputTo.prop("value", to);
+  }
+
+  $inputFrom.on("input", function () {
+    var val = $(this).prop("value");
+
+    // validate
+    if (val < min) {
+      val = min;
+    } else if (val > to) {
+      val = to;
+    }
+
+    instance.update({
+      from: val,
+    });
+  });
+
+  $inputTo.on("input", function () {
+    var val = $(this).prop("value");
+
+    // validate
+    if (val < from) {
+      val = from;
+    } else if (val > max) {
+      val = max;
+    }
+
+    instance.update({
+      to: val,
+    });
+  });
+});
+
 // /*-----header меню ------------------------------------------------------------------------*/
 document.addEventListener("DOMContentLoaded", () => {
   const burger = document.querySelector(".icon-menu");
@@ -28,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
-// /*-----header меню ------------------------------------------------------------------------*/
+
 // /*-----Липкая шапка ------------------------------------------------------------------------*/
 window.addEventListener("scroll", function () {
   if (scrollY > 0) {
@@ -120,6 +182,30 @@ function initSliders() {
           },
         },
       },
+    });
+  }
+
+  if (document.querySelector(".promo__slider")) {
+    const promoSlider = new Swiper(".promo__slider", {
+      autoHeight: false,
+      pagination: {
+        el: ".promo__pagination",
+        clickable: true,
+      },
+      breakpoints : {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        576: {
+          slidesPerView: 2.1,
+          spaceBetween: 20,
+        },
+        992: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+      }
     });
   }
 }
