@@ -9,7 +9,7 @@ body {
 
   &::after {
     content: '';
-    position: absolute;
+    position: fixed;
     left: 0;
     right: 0;
     top: 0;
@@ -17,10 +17,10 @@ body {
     background-color: transparent;
     pointer-events: none;
     transition: background-color 0.3s;
-    z-index: 11;
+    z-index: 9;
   }
 
-  &.lock {
+  &.lock, &.lock-catalog {
     overflow: hidden;
     position: relative;
 

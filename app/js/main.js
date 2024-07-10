@@ -1,6 +1,29 @@
-$(function () {
-  $(".header-catalog__select").styler();
 
+$(function () {
+
+    $(".header-catalog__select").styler();
+
+/* ----------------------------неудачные методы решения скрывания текста за точками-------------------*/
+  // (function(){
+  //   if (typeof WebFont != 'undefined') {
+  //        WebFontConfig = {
+  //             custom: {
+  //                 families: ['Rubik']
+  //             },
+  //             active: function() {
+  //                 $('select, :checkbox, :radio').trigger('refresh');
+  //             }
+  //         };
+  //         WebFont.load(WebFontConfig);
+  //    }
+  // })();
+
+  // $(".header-catalog__select").styler();
+  // setTimeout(function() {
+  //   $('.header-catalog__select').styler();
+  // }, 1000);
+
+// /*-----RANGE SLIDER ------------------------------------------------------------------------*/
   var $range = $(".filter-price__slider-input"),
     $inputFrom = $(".filter-price__input--from"),
     $inputTo = $(".filter-price__input--to"),
@@ -61,35 +84,48 @@ $(function () {
   });
 });
 
-// /*-----header меню ------------------------------------------------------------------------*/
-document.addEventListener("DOMContentLoaded", () => {
-  const burger = document.querySelector(".icon-menu");
-  const burgerX = document.querySelector(".menu__close-button");
-  const mobileMenu = document.querySelector(".menu__body");
+// /*-----бургеры ------------------------------------------------------------------------*/
+document.addEventListener("click", burgerActions);
+
+if(document.querySelector('.catalog')) {
+  document.addEventListener("click", catalogActions);
+}
+
+function burgerActions(e) {
+  const targetElement = e.target;
+  const header = document.querySelector('header');
+  const headerMenu = document.querySelector(".menu__body");
   const bodyLock = document.querySelector("body");
 
-  burger.addEventListener("click", () => {
-    mobileMenu.classList.toggle("menu--active");
-    if (mobileMenu.classList.contains("menu--active")) {
-      bodyLock.classList.add("lock");
-    } else {
-      bodyLock.classList.remove("lock");
-    }
-  });
+  if (targetElement.closest(".icon-menu")) {
+    header.classList.add("header--active");
+    headerMenu.classList.add("menu--active");
+    bodyLock.classList.add("lock");
 
-  burgerX.addEventListener("click", () => {
-    mobileMenu.classList.remove("menu--active");
+  }  else if (targetElement.closest(".menu__close-button") || !targetElement.closest(".menu__body")) {
+    header.classList.remove("header--active");
+    headerMenu.classList.remove("menu--active");
     bodyLock.classList.remove("lock");
-  });
+  }
+}
 
-  //Клик вне таргета
-  document.addEventListener("click", function (e) {
-    if (e.target !== burger && e.target !== mobileMenu) {
-      mobileMenu.classList.remove("menu--active");
-      bodyLock.classList.remove("lock");
-    }
-  });
-});
+function catalogActions(e) {
+  const targetElement = e.target;
+  const header = document.querySelector('header');
+  const catalogMenu = document.querySelector(".catalog__body");
+  const bodyLock = document.querySelector("body");
+
+  if (targetElement.closest(".header-catalog__button")) {
+    header.classList.add("header--active-catalog");
+    catalogMenu.classList.add("catalog--active");
+    bodyLock.classList.add("lock-catalog");
+
+  } else if (targetElement.closest(".catalog__close-button") || !targetElement.closest(".catalog__body")) {
+    header.classList.remove("header--active-catalog");
+    catalogMenu.classList.remove("catalog--active");
+    bodyLock.classList.remove("lock-catalog");
+  }
+}
 
 // /*-----Липкая шапка ------------------------------------------------------------------------*/
 window.addEventListener("scroll", function () {
@@ -131,7 +167,7 @@ function getIndex(el) {
   return Array.from(el.parentNode.children).indexOf(el);
 }
 
-/*-----Слайдер ------------------------------------------------------------------------*/
+/*-----Слайдеры swiper ------------------------------------------------------------------------*/
 
 function initSliders() {
   if (document.querySelector(".clients-reviews__slider")) {
@@ -192,7 +228,7 @@ function initSliders() {
         el: ".promo__pagination",
         clickable: true,
       },
-      breakpoints : {
+      breakpoints: {
         320: {
           slidesPerView: 1,
           spaceBetween: 20,
@@ -205,8 +241,10 @@ function initSliders() {
           slidesPerView: 3,
           spaceBetween: 30,
         },
-      }
+      },
     });
   }
 }
 initSliders();
+
+
