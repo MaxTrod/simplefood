@@ -1,0 +1,72 @@
+.mobile-app {
+
+  // .mobile-app__inner
+  &__inner {
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-columns: minmax(345px, 540px) minmax(350px, 570px);
+    grid-template-rows: 380px;
+    column-gap: 30px;
+
+    @include mq('tablet-2') {
+      grid-template-columns: auto minmax(100px, 570px);
+      grid-template-rows: 300px;
+    }
+
+    @include mq('tablet') {
+      grid-template-rows: auto;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  // .mobile-app__title
+  &__title {
+    margin-bottom: 45px;
+
+    @include mq('tablet-2') {
+      margin-bottom: 27px;
+    }
+
+    @include mq('tablet') {
+      margin-bottom: 15px;
+    }
+  }
+
+  // .mobile-app__text
+  &__text {
+    margin-bottom: 30px;
+    max-width: 538px;
+
+    @include mq('tablet-2') {
+      margin-bottom: 22px;
+    }
+
+    @include mq('tablet') {
+      margin-bottom: 15px;
+    }
+
+    @include mq('phone') {
+      font-size: 14px;
+    }
+  }
+
+  // .mobile-app__links
+  &__links {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+  }
+
+  // .mobile-app__image
+  &__decor {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top left;
+
+    @include mq('tablet') {
+      display: none;
+    }
+  }
+}

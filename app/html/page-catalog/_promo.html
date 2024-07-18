@@ -1,0 +1,37 @@
+<section class="promo section">
+  <div class="container">
+    <h2 class="title promo__title">Акции и скидки</h2>
+    <div class="promo__slider swiper">
+      <ul class="promo__wrapper swiper-wrapper">
+        <li class="promo__slide swiper-slide">
+          @include('../components/_restaurant-card.html', {
+            "cardLink": "#",
+            "imgSource": "images/best-restaurants/blaze-pizza.jpg",
+            "imgAlt": "Ресторан Blaze Pizza",
+            "cardTitle": "Скидка 50% на вторую пиццу",
+            "pageMain": false
+          })
+        </li>
+        <li class="promo__slide swiper-slide">
+          @include('../components/_restaurant-card.html', {
+            "cardLink": "#",
+            "imgSource": "images/best-restaurants/kfc.jpg",
+            "imgAlt": "Ресторан KFC",
+            "cardTitle": "Картошечка из KFC даром при заказе бургера",
+            "pageMain": false
+          })
+        </li>
+        <li class="promo__slide swiper-slide">
+          @include('../components/_restaurant-card.html', {
+            "cardLink": "#",
+            "imgSource": "images/best-restaurants/star-burgers.jpg",
+            "imgAlt": "Ресторан Star Burgers",
+            "cardTitle": "Чёрные бургеры на чёрный день",
+            "pageMain": false
+          })
+        </li>
+      </ul>
+      <div class="promo__pagination pagination swiper-pagination"></div>
+    </div>
+  </div>
+</section>

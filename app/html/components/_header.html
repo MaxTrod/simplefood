@@ -1,0 +1,59 @@
+<div class="wrapper">
+<header class="header">
+  <div class="container">
+    <div class="header__inner">
+      <a class="logo header__logo" href="">
+        <img class="logo__img" src="images/logo.svg" width="200" height="39" alt="Логотип">
+      </a>
+
+      <nav class="menu">
+        <button class="menu__icon icon-menu" aria-label="открыть меню" type="button">
+          <span class="icon-menu__line"></span>
+        </button>
+        <div class="menu__body">
+          <div class="menu__top">
+            <a class="logo" href="#">
+              <img class="logo__img" src="images/logo.svg" width="201" height="40" alt="Логотип">
+            </a>
+            <button class="menu__close-button close-button" aria-label="закрыть меню" type="button">
+              <span></span>
+            </button>
+          </div>
+          <ul class="menu__nav-list">
+            <li class="menu__nav-item">
+              <a class="menu__nav-link link @if(link==1){active-link}" href="index.html">Главная</a>
+            </li>
+            <li class="menu__nav-item">
+              <a class="menu__nav-link link @if(link==2){active-link}" href="catalog.html">Блюда</a>
+            </li>
+            <li class="menu__nav-item menu__nav-item">
+              <a class="menu__nav-link link menu__nav-link--contacts" href="#footer">Контакты</a>
+            </li>
+          </ul>
+          <div class="menu__contacts">
+            @include('../components/_contacts-menu.html')
+          </div>
+        </div>
+      </nav>
+
+      <ul class="user-actions">
+        <li class="user-actions__item">
+          <a class="user-actions__link user-actions__link--search" href="#" aria-label="поиск по сайту">
+            <svg>
+              <use xlink:href="images/sprite.svg#icon-search"></use>
+            </svg>
+          </a>
+        </li>
+
+        <li class="user-actions__item">
+          <a class="user-actions__link user-actions__link--cart" href="#" aria-label="корзина товара">
+            <svg>
+              <use xlink:href="images/sprite.svg#icon-cart"></use>
+            </svg>
+            <span class="user-actions__link-quantity">4</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>

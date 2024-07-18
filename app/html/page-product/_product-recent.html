@@ -1,0 +1,70 @@
+<section class="product-recent section">
+  <div class="container">
+    <div class="product-recent__inner">
+      <h2 class="product-recent__title title">Вас может заинтересовать</h2>
+      <div class="product-recent__slider swiper">
+        <ul class="product-recent__wrapper swiper-wrapper">
+          <li class="product-recent__slide swiper-slide">
+            @include('../components/_tab-card.html', {
+              "tabLink": "#",
+              "imgSource": "images/popular-categories/cheesburger-leaf.png",
+              "imgAlt": "Чизбургер с листьями салата",
+              "tabTitle": "Чизбургер с листьями салата",
+              "tabPrice": "160",
+            })
+          </li>
+          <li class="product-recent__slide swiper-slide">
+            @include('../components/_tab-card.html', {
+              "tabLink": "#",
+              "imgSource": "images/popular-categories/beefburger.png",
+              "imgAlt": "Бифбургер",
+              "tabTitle": "Бифбургер",
+              "tabPrice": "190",
+            })
+          </li>
+          <li class="product-recent__slide swiper-slide">
+            @include('../components/_tab-card.html', {
+              "tabLink": "#",
+              "imgSource": "images/popular-categories/royal-cheeseburger.png",
+              "imgAlt": "Королевский чизбургер",
+              "tabTitle": "Королевский чизбургер",
+              "tabPrice": "260",
+            })
+          </li>
+          <li class="product-recent__slide swiper-slide">
+            @include('../components/_tab-card.html', {
+              "tabLink": "#",
+              "imgSource": "images/popular-categories/black-hamburger.png",
+              "imgAlt": "Черный гамбургер",
+              "tabTitle": "Черный гамбургер",
+              "tabPrice": "199",
+            })
+          </li>
+          <li class="product-recent__slide swiper-slide">
+            @include('../components/_tab-card.html', {
+              "tabLink": "#",
+              "imgSource": "images/popular-categories/chickenburger.png",
+              "imgAlt": "Чикен бургер",
+              "tabTitle": "Чикен бургер",
+              "tabPrice": "180",
+            })
+          </li>
+          <li class="product-recent__slide swiper-slide">
+            @include('../components/_tab-card.html', {
+              "tabLink": "#",
+              "imgSource": "images/popular-categories/cheesburger-leaf.png",
+              "imgAlt": "Чизбургер с листьями салата",
+              "tabTitle": "Чизбургер с листьями салата",
+              "tabPrice": "160",
+            })
+          </li>
+        </ul>
+        <div class="product-recent__pagination pagination"></div>
+      </div>
+      <div class="product-recent__control">
+        <button class="product-recent__btn-prev swiper-button-prev"></button>
+        <button class="product-recent__btn-next swiper-button-next"></button>
+      </div>
+    </div>
+  </div>
+</section>

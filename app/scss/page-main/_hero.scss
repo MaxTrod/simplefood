@@ -1,0 +1,93 @@
+.hero {
+  padding-top: 160px;
+  padding-bottom: 60px;
+
+  @include mq('tablet-2') {
+    padding-bottom: 40px;
+  }
+
+  @include mq('tablet') {
+    padding-top: 74px;
+    padding-bottom: 20px;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: auto minmax(254px, 560px);
+    grid-template-rows: 660px;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20px;
+    position: relative;
+
+    @include mq('tablet-2') {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 500px;
+    }
+
+    @include mq('tablet') {
+      grid-template-columns: 345px;
+      grid-template-rows: 300px;
+    }
+  }
+
+  // .hero__content
+  &__content {
+    display: grid;
+    row-gap: 20px;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__decor {
+    height: 100%;
+    background-size: 100% 100%;
+    background-position: center left;
+    background-repeat: no-repeat;
+
+    @include mq('tablet') {
+      position: absolute;
+      width: 255px;
+      height: 100%;
+      right: 0;
+    }
+
+    @include mq('phone') {
+      opacity: 0.3;
+    }
+  }
+
+  // .hero__title
+  &__title {
+    color: $title;
+    @extend %Rubik-500;
+    font-size: 66px;
+    line-height: 1.3;
+    text-transform: uppercase;
+
+    @include mq('tablet-2') {
+      font-size: 53px;
+    }
+
+    @include mq('tablet') {
+      font-size: 40px;
+    }
+  }
+
+  // .hero__text-orange
+  &__text-orange {
+    color: $accent;
+  }
+
+  &__text {
+    @include line-clamp(3);
+    max-width: 450px;
+  }
+
+  // .hero__actions
+  &__actions {
+    display: flex;
+    align-items: center;
+    column-gap: 34px;
+  }
+}

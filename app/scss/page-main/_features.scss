@@ -1,0 +1,124 @@
+.features {
+  &__inner {
+    display: grid;
+    grid-template-columns: minmax(345px, 440px) 470px;
+    grid-template-rows: 585px;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20px;
+    position: relative;
+
+    @include mqm('desktop') {
+      padding: 0 70px;
+    }
+
+    @include mq('tablet-2') {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 450px;
+    }
+
+    @include mq('tablet') {
+      grid-template-columns: 348px;
+      grid-template-rows: 462px;
+    }
+  }
+
+  // .features__content
+  &__content {
+    display: grid;
+    row-gap: 30px;
+    position: relative;
+    z-index: 2;
+  }
+
+  // .features__info
+  &__info {
+    display: grid;
+    row-gap: 20px;
+
+    @include mq('tablet') {
+      row-gap: 22px;
+    }
+  }
+
+  // .features__info-item
+  &__info-item {
+    color: $title;
+    padding-left: 64px;
+    font-size: 24px;
+    line-height: 1.5;
+    position: relative;
+
+    &::before {
+      @extend %pseudo-y;
+      width: 34px;
+      height: 34px;
+      @extend %svg-color;
+    }
+
+    @include mq('tablet-2') {
+      font-size: 20px;
+      padding-left: 44px;
+    }
+
+    @include mq('tablet') {
+      font-size: 18px;
+    }
+  }
+
+  // .features__info-item--delivery
+  &__info-item--delivery {
+    &::before {
+      mask-image: url('../images/sprite.svg#icon-timer');
+      -webkit-mask-image: url('../images/sprite.svg#icon-timer');
+      background-color: $accent;
+    }
+  }
+
+  // .features__info-item--couriers
+  &__info-item--couriers {
+    &::before {
+      mask-image: url('../images/sprite.svg#icon-delivery');
+      -webkit-mask-image: url('../images/sprite.svg#icon-delivery');
+      background-color: #00AAFF;
+    }
+  }
+
+  // .features__info-item--establishment
+  &__info-item--establishment {
+    &::before {
+      mask-image: url('../images/sprite.svg#icon-restorant');
+      -webkit-mask-image: url('../images/sprite.svg#icon-restorant');
+      background-color: #FF2222;
+    }
+  }
+
+  // .features__button
+  &__button {
+    justify-self: start;
+
+    @include mq('tablet-2') {
+      padding: 12px 32px;
+    }
+
+    @include mq('tablet') {
+      padding: 12px 32px;
+    }
+  }
+
+  // .features__decor
+  &__decor {
+    height: 100%;
+    background-size: 100% 100%;
+    background-position: center left;
+    background-repeat: no-repeat;
+
+    @include mq('tablet') {
+      position: absolute;
+      right: 0;
+      height: 100%;
+      width: 345px;
+      opacity: 0.5;
+    }
+  }
+}

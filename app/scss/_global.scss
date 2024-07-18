@@ -95,6 +95,10 @@ body {
   overflow: hidden;
 }
 
+.current-link {
+  color: $accent;
+}
+
 .logo {
   transition: opacity 0.3s, box-shadow 0.3s;
   border-radius: 5px;
@@ -269,6 +273,20 @@ body {
 
   &--center {
     text-align: center;
+  }
+}
+
+.title-opinion {
+  @extend %Rubik-500;
+  font-size: 24px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  color: $title;
+  @include mq('tablet-2'){
+    font-size: 22px;
+  }
+  @include mq('tablet'){
+    font-size: 20px; 
   }
 }
 

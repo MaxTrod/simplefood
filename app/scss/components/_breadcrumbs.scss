@@ -1,0 +1,63 @@
+.breadcrumbs {
+  padding-top: 160px;
+
+  @include mq('tablet') {
+    padding-top: 74px;
+    padding-bottom: 10px;
+  }
+
+  &__inner {
+    background-color: rgba($accent, 0.1);
+  }
+
+  &__list {
+    padding: 24px 0;
+    display: flex;
+    align-items: center;
+    column-gap: 17px;
+
+    @include mq('tablet') {
+      padding: 11.5px 0;
+    }
+  }
+
+  &__item {
+    flex: 0 0 auto;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      -webkit-mask-image: url('../images/sprite.svg#icon-chevron-right');
+      mask-image: url('../images/sprite.svg#icon-chevron-right');
+      @extend %svg-color;
+      top: 3px;
+      right: -12px;
+      width: 6px;
+      height: 10px;
+      background-color: #c1c1c1;
+
+      @include mq('tablet') {
+        top: 15px;
+      }
+    }
+
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    color: #505050;
+
+    @include mq('tablet') {
+      line-height: 3;
+    }
+  }
+}

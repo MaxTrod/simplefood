@@ -1,0 +1,134 @@
+.product-recent {
+  // .product-recent__inner
+  &__inner {
+    position: relative;
+  }
+  // .product-recent__title
+  &__title {
+    margin-bottom: 60px;
+    @include mq('tablet-2'){
+      margin-bottom: 45px;
+    }
+    @include mq('tablet'){
+      margin-bottom: 30px;
+    }
+  }
+  // .product-recent__slider
+  &__slider {
+    overflow: clip;
+    position: relative;
+  }
+  // .product-recent__wrapper
+  &__wrapper {
+    box-sizing: border-box;
+    @include mq('phone'){
+       margin-bottom: 25px; 
+    }
+  }
+  // .product-recent__slide
+  &__slide {
+    padding: 1px;
+  }
+   
+  &__control {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+    padding-bottom: 2px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    @include mq('phone'){
+       display: none; 
+    }
+  }
+
+  &__btn-prev,
+  &__btn-next {
+    cursor: pointer;
+    width: 38px;
+    height: 38px;
+    border: 3px solid $interactive;
+    border-radius: 50%;
+    transition: box-shadow 0.3s, background-color 0.3s, border 0.3s;
+    position: relative;
+    &::before {
+      @extend %pseudo-xy;
+      width: 14px;
+      height: 20px;
+      background-color: $interactive;
+      @extend %svg-color;
+      z-index: 2;
+      transition: background-color 0.3s;
+    }
+    &:focus {
+      box-shadow: 0 0 0 2px rgba($accent, 0.7);
+
+      &.swiper-button-disabled {
+        box-shadow: none;
+      }
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: rgba($accent, 0.1);
+        border: 3px solid rgba($accent, 0.4);
+
+        &.swiper-button-disabled {
+          background-color: transparent;
+        }
+
+        &::before {
+          background-color: rgba($accent, 0.4);
+        }
+      }
+    }
+
+    &:active {
+      background-color: rgba($accent, 0.1);
+      box-shadow: none;
+      border: none;
+
+      &.swiper-button-disabled {
+        border: 3px solid $accent;
+      }
+
+      &::before {
+        background-color: $accent;
+      }
+    }
+
+    &.swiper-button-disabled {
+      border-color: $accent;
+
+      &::before {
+        background-color: $accent;
+      }
+    }
+  }
+  // .product-recent__btn-prev
+  &__btn-prev {
+    &::before {
+      -webkit-mask-image: url('../images/sprite.svg#icon-left');
+      mask-image: url('../images/sprite.svg#icon-left');
+    }
+  }
+  // .product-recent__btn-next
+  &__btn-next {
+    &::before {
+      -webkit-mask-image: url('../images/sprite.svg#icon-left');
+      mask-image: url('../images/sprite.svg#icon-left');
+      transform: translate(-50%, -50%) rotate(180deg);
+    }
+  }
+  // .product-recent__pagination
+  &__pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include mqm('phone'){
+       display: none; 
+    }
+  }
+}
+

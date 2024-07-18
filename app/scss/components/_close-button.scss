@@ -1,0 +1,43 @@
+.close-button {
+  display: none;
+  position: relative;
+  z-index: 5;
+  width: 44px;
+  height: 44px;
+  transform: translateX(9px);
+  margin-right: 5px;
+
+  span,
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    background-color: $title;
+    height: 2px;
+    width: 24px;
+    right: auto;
+  }
+
+  span {
+    left: 50%;
+    width: 0;
+    transition: top 0.3s, left 0.3s, width 0.3s;
+  }
+
+  &::before {
+    top: calc(50% - 1px);
+    transform: rotate(-45deg);
+    transition: top 0.3s, transform 0.3s;
+  }
+
+  &::after {
+    bottom: calc(50% - 1px);
+    transform: rotate(45deg);
+    transition: bottom 0.3s, transform 0.3s;
+  }
+
+  @include mq('tablet') {
+    display: flex;
+    justify-content: center;
+  }
+}
