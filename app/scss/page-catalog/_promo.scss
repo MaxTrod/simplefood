@@ -1,0 +1,58 @@
+/*-----АКЦИИ И СКИДКИ-------------------------------------------------------------*/
+.promo {
+  padding-bottom: 45px;
+
+  @include mq('tablet-2') {
+    padding-bottom: 35px;
+  }
+
+  @include mq('tablet') {
+    padding-bottom: 20px;
+  }
+
+  &__title {
+    margin-bottom: 60px;
+
+    @include mq('tablet-2') {
+      margin-bottom: 50px;
+    }
+
+    @include mq('tablet') {
+      margin-bottom: 40px;
+    }
+
+    @include mq('phone') {
+      text-align: center;
+    }
+  }
+
+  &__slider {}
+
+  &__wrapper {
+    // overflow: hidden;
+    padding-bottom: 10px;
+
+    @include mq('tablet') {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__slide {
+    .restaurant-card {
+      justify-content: flex-start;
+    }
+
+    .restaurant-card__wrap {
+      padding-bottom: 0;
+    }
+  }
+
+  &__pagination {
+    display: none;
+
+    @include mq('phone') {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

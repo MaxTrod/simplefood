@@ -1,0 +1,17 @@
+<article class="restaurant-card">
+  <a class="restaurant-card__image-link" href="@cardLink">
+    <img class="restaurant-card__image" src="@imgSource" width="370" height="300" alt="@imgAlt">
+  </a>
+  <div class="restaurant-card__wrap">
+    <a class="restaurant-card__link-title link" href="@cardLink">
+      <h3 class="restaurant-card__title">@cardTitle</h3>
+    </a>
+    @if (pageMain) {
+      <div class="restaurant-card__info">
+        <span class="restaurant-card__time">@cardTime</span>
+        <a class="restaurant-card__button btn" href="@cardLink"></a>
+      </div>
+    }
+  </div>
+</article>
+

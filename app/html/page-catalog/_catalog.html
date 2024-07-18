@@ -1,0 +1,252 @@
+<section class="catalog section">
+  <div class="container">
+
+    <div class="header-catalog">
+      <h1 class="header-catalog__title title">Каталог продуктов</h1>
+      <button class="header-catalog__button" type="button" aria-label="Кнопка открытия фильтров товара"></button>
+      <div class="header-catalog__selects">
+        <form class="header-catalog__selects-form" action="#">
+          <select class="header-catalog__select header-catalog__select--name">
+            <option value="">По названию</option>
+            <option value="">По названию</option>
+            <option value="">По названию</option>
+            <option value="">По названию</option>
+          </select>
+
+          <select class="header-catalog__select header-catalog__select--number">
+            <option value="">по 12</option>
+            <option value="">по 12</option>
+            <option value="">по 12</option>
+            <option value="">по 12</option>
+          </select>
+        </form>
+      </div>
+    </div>
+
+    <div class="catalog__inner">
+      <div class="catalog__body">
+        <button class="catalog__close-button close-button" aria-label="закрыть фильтры товара" type="button">
+          <span></span>
+        </button>
+        <ul class="catalog__filters filters">
+          <li class="filters__item filter-category">
+            <div class="filters__item-header">
+              <h2 class="filters__item-title">Категории</h2>
+            </div>
+            <ul class="filter-category__list">
+              <li class="filter-category__item">
+                <a class="filter-category__link link current-link" href="#">Бургеры</a>
+              </li>
+              <li class="filter-category__item">
+                <a class="filter-category__link link" href="#">Пицца</a>
+              </li>
+              <li class="filter-category__item">
+                <a class="filter-category__link link" href="#">Сендвичи</a>
+              </li>
+              <li class="filter-category__item">
+                <a class="filter-category__link link" href="#">Азиатская кухня</a>
+              </li>
+              <li class="filter-category__item">
+                <a class="filter-category__link link" href="#">Сеты</a>
+              </li>
+              <li class="filter-category__item">
+                <a class="filter-category__link link" href="#">Европейская кухня</a>
+              </li>
+              <li class="filter-category__item">
+                <a class="filter-category__link link" href="#">Напитки</a>
+              </li>
+              <li class="filter-category__item">
+                <a class="filter-category__link link" href="#">Алкоголь</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="filters__item filter-offer">
+            <div class="filters__item-header">
+              <h2 class="filters__item-title">Предложения</h2>
+            </div>
+            <form class="filter-offer__form" action="#">
+              <ul class="filter-offer__list">
+                <li class="filter-offer__item">
+                  <label class="filter-offer__label">
+                    <input class="filter-offer__input" type="checkbox">
+                    <span class="filter-offer__checkbox"></span>
+                    <span class="filter-offer__text">Со скидкой</span>
+                  </label>
+                </li>
+                <li class="filter-offer__item">
+                  <label class="filter-offer__label">
+                    <input class="filter-offer__input" type="checkbox">
+                    <span class="filter-offer__checkbox"></span>
+                    <span class="filter-offer__text">Новинка</span>
+                  </label>
+                </li>
+                <li class="filter-offer__item">
+                  <label class="filter-offer__label">
+                    <input class="filter-offer__input" type="checkbox">
+                    <span class="filter-offer__checkbox"></span>
+                    <span class="filter-offer__text">Хит</span>
+                  </label>
+                </li>
+              </ul>
+            </form>
+          </li>
+
+          <li class="filters__item filter-price">
+            <div class="filters__item-header">
+              <h2 class="filters__item-title">Цена</h2>
+            </div>
+            <form class="filter-price__form" action="#">
+              <div class="filter-price__controls">
+                <div class="filter-price__column">
+                  от<input type="text" class="filter-price__input filter-price__input--from" value="0" />₴
+                </div>
+                <div class="filter-price__column">
+                  до<input type="text" class="filter-price__input filter-price__input--to" value="0" />₴
+                </div>
+              </div>
+              <div class="filter-price__slider">
+                <input type="text" class="filter-price__slider-input" value="" />
+              </div>
+            </form>
+          </li>
+        </ul>
+      </div>
+
+      <div class="catalog__content">
+        <ul class="catalog__items">
+          <li class="catalog__item">
+            @include('../components/_tab-card.html', {
+              
+              "imgSource": "images/popular-categories/cheesburger-leaf.png",
+              "imgAlt": "Чизбургер с листьями салата",
+              "tabTitle": "Чизбургер с листьями салата",
+              "tabPrice": "160",
+            })
+          </li>
+          <li class="catalog__item">
+            @include('../components/_tab-card.html', {
+              
+              "imgSource": "images/popular-categories/beefburger.png",
+              "imgAlt": "Бифбургер",
+              "tabTitle": "Бифбургер",
+              "tabPrice": "190",
+            })
+          </li>
+          <li class="catalog__item">
+            @include('../components/_tab-card.html', {
+             
+             "imgSource": "images/popular-categories/royal-cheeseburger.png",
+             "imgAlt": "Королевский чизбургер",
+             "tabTitle": "Королевский чизбургер",
+             "tabPrice": "260",
+            })
+          </li>
+          <li class="catalog__item">
+            @include('../components/_tab-card.html', {
+              
+              "imgSource": "images/popular-categories/black-hamburger.png",
+              "imgAlt": "Черный гамбургер",
+              "tabTitle": "Черный гамбургер",
+              "tabPrice": "199",
+            })
+          </li>
+
+           <li class="catalog__item">
+            @include('../components/_tab-card.html', {
+              
+              "imgSource": "images/popular-categories/cheesburger-leaf.png",
+              "imgAlt": "Чизбургер с листьями салата",
+              "tabTitle": "Чизбургер с листьями салата",
+              "tabPrice": "160",
+            })
+          </li>
+          <li class="catalog__item">
+            @include('../components/_tab-card.html', {
+              
+              "imgSource": "images/popular-categories/beefburger.png",
+              "imgAlt": "Бифбургер",
+              "tabTitle": "Бифбургер",
+              "tabPrice": "190",
+            })
+          </li>
+          <li class="catalog__item">
+            @include('../components/_tab-card.html', {
+             
+             "imgSource": "images/popular-categories/royal-cheeseburger.png",
+             "imgAlt": "Королевский чизбургер",
+             "tabTitle": "Королевский чизбургер",
+             "tabPrice": "260",
+            })
+          </li>
+          <li class="catalog__item">
+            @include('../components/_tab-card.html', {
+              
+              "imgSource": "images/popular-categories/black-hamburger.png",
+              "imgAlt": "Черный гамбургер",
+              "tabTitle": "Черный гамбургер",
+              "tabPrice": "199",
+            })
+          </li>
+          <li class="catalog__item">
+            @include('../components/_tab-card.html', {
+              
+              "imgSource": "images/popular-categories/cheesburger-leaf.png",
+              "imgAlt": "Чизбургер с листьями салата",
+              "tabTitle": "Чизбургер с листьями салата",
+              "tabPrice": "160",
+            })
+          </li>
+          <li class="catalog__item">
+            @include('../components/_tab-card.html', {
+              
+              "imgSource": "images/popular-categories/beefburger.png",
+              "imgAlt": "Бифбургер",
+              "tabTitle": "Бифбургер",
+              "tabPrice": "190",
+            })
+          </li>
+          <li class="catalog__item">
+            @include('../components/_tab-card.html', {
+             
+             "imgSource": "images/popular-categories/royal-cheeseburger.png",
+             "imgAlt": "Королевский чизбургер",
+             "tabTitle": "Королевский чизбургер",
+             "tabPrice": "260",
+            })
+          </li>
+          <li class="catalog__item">
+            @include('../components/_tab-card.html', {
+              
+              "imgSource": "images/popular-categories/black-hamburger.png",
+              "imgAlt": "Черный гамбургер",
+              "tabTitle": "Черный гамбургер",
+              "tabPrice": "199",
+            })
+          </li>
+        </ul>
+        <div class="catalog__pagination pagination-catalog">
+          <span class="pagination-catalog__arrow pagination-catalog__arrow--prev pagination-catalog__arrow--disabled"></span>
+          <ul class="pagination-catalog__list">
+            <li class="pagination-catalog__item">
+              <span class="pagination-catalog__link pagination-catalog__link--active">1</span>
+            </li>
+            <li class="pagination-catalog__item">
+              <a class="pagination-catalog__link" href="#">2</a>
+            </li>
+            <li class="pagination-catalog__item">
+              <span class="pagination-catalog__link pagination-catalog__link--dots">...</span>
+            </li>
+            <li class="pagination-catalog__item">
+              <a class="pagination-catalog__link" href="#">9</a>
+            </li>
+            <li class="pagination-catalog__item">
+              <a class="pagination-catalog__link" href="#">10</a>
+            </li>
+          </ul>
+          <a href="#" class="pagination-catalog__arrow pagination-catalog__arrow--next"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
