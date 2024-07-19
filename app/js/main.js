@@ -399,29 +399,51 @@ reviewsNumber();
 
 //--------------------------------------------------carousel and fancybox------------------------------------------------------------------
 
-  const myCarousel = new Carousel (document.getElementById("myCarousel"), {
+//--------------------------------------------------carousel and fancybox------------------------------------------------------------------
+
+let myCarousel;
+const initCarousel = () => {
+  const showDots = window.innerWidth < 576; 
+  const navCarousel = window.innerWidth > 576;
+
+  myCarousel = new Carousel(document.getElementById("myCarousel"), {
     preload: 2,
-    Dots: false,
+    Dots: showDots,
     infinite: false,
+    Navigation: navCarousel
   });
-  
+
   Fancybox.bind('[data-fancybox="gallery"]', {
     infinite: false,
     Thumbs: false,
     Toolbar: false,
-  
     closeButton: "top",
     Carousel: {
       Dots: true,
       on: {
         change: (that) => {
-          myCarousel.slideTo(myCarousel.findPageForSlide(that.page), {
-            friction: 0,
-          });
+          if (myCarousel) {
+            myCarousel.slideTo(myCarousel.findPageForSlide(that.page), {
+              friction: 0,
+            });
+          }
         },
       },
     },
   });
+};
+
+const updateCarousel = () => {
+  if (myCarousel) {
+    myCarousel.destroy();
+  }
+  initCarousel();
+};
+
+window.addEventListener("load", initCarousel);
+
+window.addEventListener("resize", updateCarousel);
+
 
 
 
