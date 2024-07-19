@@ -399,53 +399,56 @@ reviewsNumber();
 
 //--------------------------------------------------carousel and fancybox------------------------------------------------------------------
 
-//--------------------------------------------------carousel and fancybox------------------------------------------------------------------
+if(document.getElementById('product-page')) {
 
-let myCarousel;
-const initCarousel = () => {
-  const showDots = window.innerWidth < 576; 
-  const navCarousel = window.innerWidth > 576;
+  // Инициализация слайдера
+  let myCarousel;
 
-  myCarousel = new Carousel(document.getElementById("myCarousel"), {
-    preload: 2,
-    Dots: showDots,
-    infinite: false,
-    Navigation: navCarousel
-  });
-
-  Fancybox.bind('[data-fancybox="gallery"]', {
-    infinite: false,
-    Thumbs: false,
-    Toolbar: false,
-    closeButton: "top",
-    Carousel: {
-      Dots: true,
-      on: {
-        change: (that) => {
-          if (myCarousel) {
-            myCarousel.slideTo(myCarousel.findPageForSlide(that.page), {
-              friction: 0,
-            });
-          }
+  function initCarousel() {
+    myCarousel = new Carousel(document.getElementById("myCarousel"), {
+      preload: 2,
+      Dots: false,
+      infinite: false,
+    });
+  
+    Fancybox.bind('[data-fancybox="gallery"]', {
+      infinite: false,
+      Thumbs: false,
+      Toolbar: false,
+      closeButton: "top",
+      Carousel: {
+        Dots: true,
+        on: {
+          change: (that) => {
+            if (myCarousel) {
+              myCarousel.slideTo(myCarousel.findPageForSlide(that.page), {
+                friction: 0,
+              });
+            }
+          },
         },
       },
-    },
-  });
-};
-
-const updateCarousel = () => {
-  if (myCarousel) {
-    myCarousel.destroy();
+    });
   }
-  initCarousel();
-};
-
-window.addEventListener("load", initCarousel);
-
-window.addEventListener("resize", updateCarousel);
-
-
-
+  
+  // Функция для проверки ширины окна и управления слайдером
+  function checkWindowSize() {
+    if (window.innerWidth <= 576) {
+      if (myCarousel) {
+        myCarousel.destroy();
+        myCarousel = null;  
+      }
+    } else {
+      if (!myCarousel) {
+        initCarousel();
+      }
+    }
+  }
+  
+  checkWindowSize();
+  
+  window.addEventListener('resize', checkWindowSize);
+}
 
 
 
