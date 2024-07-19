@@ -10,6 +10,8 @@ const svgSprite = require("gulp-svg-sprite");
 const cheerio = require("gulp-cheerio");
 const replace = require("gulp-replace");
 const fileInclude = require('gulp-file-include');
+const fonter = require('gulp-fonter');
+const ttf2woff2 = require('gulp-ttf2woff2');
 
 
 function htmlInclude() {
@@ -117,9 +119,19 @@ function svgSprites() {
     .pipe(dest("app/images"));
 }
 
+// function fonts() {
+//   return src('app/fonts/*.*')
+//   .pipe(dest('app'))
+// }
+
 function fonts() {
-  return src('app/fonts/*.*')
-  .pipe(dest('app'))
+  return src('app/fonts/src/*.*')
+     .pipe(fonter({
+        formats: ['woff', 'ttf']
+     }))
+     .pipe(src('app/fonts/*.ttf'))
+     .pipe(ttf2woff2())
+     .pipe(dest('app/fonts'))
 }
 
 function build() {
@@ -127,7 +139,7 @@ function build() {
     "app/css/style.min.css", 
     "app/js/main.min.js", 
     "app/*.html", 
-    "app/fonts/*.*", 
+    "app/fonts/*.*"
   ], {base: "app",})
   .pipe(dest("dist"));
 }
@@ -150,6 +162,7 @@ exports.fonts = fonts;
 exports.browsersync = browsersync;
 exports.htmlInclude = htmlInclude;
 exports.watching = watching;
+exports.fonts = fonts;
 exports.images = images;
 exports.svgSprites = svgSprites;
 exports.cleanDist = cleanDist;

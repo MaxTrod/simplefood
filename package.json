@@ -12,7 +12,7 @@
     "@fancyapps/ui": "^4.0.30",
     "browser-sync": "^3.0.2",
     "del": "^6.1.1",
-    "gulp": "^5.0.0",
+    "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-cheerio": "^1.0.0",
     "gulp-concat": "^2.6.1",
@@ -28,6 +28,8 @@
     "rateyo": "^2.3.2",
     "sass": "^1.77.6",
     "swiper": "^11.1.4",
-    "webfontloader": "^1.6.28"
+    "webfontloader": "^1.6.28",
+    "gulp-fonter": "^0.3.0",
+    "gulp-ttf2woff2": "^4.0.1"
   }
 }
