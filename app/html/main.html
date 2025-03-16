@@ -1,0 +1,25 @@
+@include('components/_head.html', {
+  "pageTitle" : "Главная страница"
+  })
+  
+  @include('components/_header.html', {
+  "link":"1"
+  })
+  
+  <main class="page" id="main-page">
+    @include('page-main/_hero.html')
+  
+    @include('page-main/_popular-categories.html')
+  
+    @include('page-main/_features.html')
+  
+    @include('page-main/_best-restaurants.html')
+  
+    @include('page-main/_clients-reviews.html')
+  
+    @include('components/_mobile-app.html')
+  </main>
+  
+  @include('components/_footer.html')
+  
+  @include('components/_scripts.html')

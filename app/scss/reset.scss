@@ -16,10 +16,11 @@ a {
   color: inherit;
 }
 
-ul,
-ol,
-li {
-  list-style: none;
+ul {
+    list-style: none;
+  li {
+    list-style: none;
+  }
 }
 
 img {

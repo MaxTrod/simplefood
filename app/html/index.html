@@ -1,25 +1,22 @@
 @include('components/_head.html', {
-"pageTitle" : "Главная страница"
+"pageTitle" : "интро"
 })
 
-@include('components/_header.html', {
-"link":"1"
-})
-
-<main class="page" id="main-page">
-  @include('page-main/_hero.html')
-
-  @include('page-main/_popular-categories.html')
-
-  @include('page-main/_features.html')
-
-  @include('page-main/_best-restaurants.html')
-
-  @include('page-main/_clients-reviews.html')
-
-  @include('components/_mobile-app.html')
+<main class="page intro-page" id="интро"> 
+  <div class="intro-page__body">
+    <h1 class="intro-page__title">Simple<span>food</span></h1>
+    <ol class="intro-page__list">
+      <li class="intro-page__item">
+        <a class="intro-page__link" href="main.html" target="_blank">Main</a>
+      </li>
+      <li class="intro-page__item">
+        <a class="intro-page__link" href="catalog.html" target="_blank">Catalog</a>
+      </li>
+      <li class="intro-page__item">
+        <a class="intro-page__link" href="product.html" target="_blank">Product</a>
+      </li>
+    </ol>
+  </div>
 </main>
-
-@include('components/_footer.html')
 
 @include('components/_scripts.html')
