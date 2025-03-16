@@ -1,0 +1,77 @@
+<section class="best-restaurants section">
+  <div class="container">
+    <h2 class="title title--center best-restaurants__title">Лучшие рестораны</h2>
+    <div class="best-restaurants__items">
+      <div class="best-restaurants__slider swiper">
+        <ul class="best-restaurants__wrapper swiper-wrapper">
+          <li class="best-restaurants__slide swiper-slide">
+            @include('../components/_restaurant-card.html', {
+              "cardLink": "#",
+              "imgSource": "@images/best-restaurants/blaze-pizza.jpg",
+              "imgAlt": "Ресторан Blaze Pizza",
+              "cardTitle": "Blaze Pizza",
+              "cardTime": "11:00 - 22:00",
+              "pageMain": true
+            })
+          </li>
+
+          <li class="best-restaurants__slide swiper-slide">
+            @include('../components/_restaurant-card.html', {
+              "cardLink": "#",
+              "imgSource": "@images/best-restaurants/mcdonald.jpg",
+              "imgAlt": "Ресторан McDonald`s",
+              "cardTitle": "McDonald`s",
+              "cardTime": "06:00 - 23:00",
+              "pageMain": true
+            })
+          </li>
+
+          <li class="best-restaurants__slide swiper-slide">
+            @include('../components/_restaurant-card.html', {
+              "cardLink": "#",
+              "imgSource": "@images/best-restaurants/pizza-runcho.jpg",
+              "imgAlt": "Ресторан Pizza Runcho",
+              "cardTitle": "Pizza Runcho",
+              "cardTime": "12:00 - 21:00",
+              "pageMain": true
+            })
+          </li>
+
+          <li class="best-restaurants__slide swiper-slide">
+            @include('../components/_restaurant-card.html', {
+              "cardLink": "#",
+              "imgSource": "@images/best-restaurants/kfc.jpg",
+              "imgAlt": "Ресторан KFC",
+              "cardTitle": "KFC",
+              "cardTime": "06:00 - 23:00",
+              "pageMain": true
+            })
+          </li>
+
+          <li class="best-restaurants__slide swiper-slide">
+            @include('../components/_restaurant-card.html', {
+              "cardLink": "#",
+              "imgSource": "@images/best-restaurants/pizza-hut.jpg",
+              "imgAlt": "Ресторан Pizza Hut",
+              "cardTitle": "Pizza Hut",
+              "cardTime": "11:00 - 22:00",
+              "pageMain": true
+            })
+          </li>
+
+          <li class="best-restaurants__slide swiper-slide">
+            @include('../components/_restaurant-card.html', {
+              "cardLink": "#",
+              "imgSource": "@images/best-restaurants/star-burgers.jpg",
+              "imgAlt": "Ресторан Star Burgers",
+              "cardTitle": "Star Burgers",
+              "cardTime": "09:00 - 21:00",
+              "pageMain": true
+            })
+          </li>
+        </ul>
+        <div class="best-restaurants__pagination pagination swiper-pagination"></div>
+      </div>
+    </div>
+  </div>
+</section>

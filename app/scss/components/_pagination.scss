@@ -1,0 +1,17 @@
+.pagination {
+  display: flex;
+  column-gap: 15px;
+
+  .swiper-pagination-bullet {
+    cursor: pointer;
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: $interactive;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: $accent;
+  }
+}

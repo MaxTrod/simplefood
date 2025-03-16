@@ -1,0 +1,77 @@
+$main: #31352b;
+$title: #363853;
+$accent: #ff6838;
+
+$bg: #f9faff;
+$bg-secondary: #ececec;
+$bg-checkbox: #faeded;
+
+$icon: #fff;
+$icon-secondary: #fff2ed;
+
+$interactive: #c2c2c2;
+$interactive-secondary: #c1c1c1;
+$interactive-border: #e4e4e4;
+
+
+%Rubik-300 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 300;
+}
+
+%Rubik-400 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+}
+
+%Rubik-500 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+}
+
+%Rubik-italic {
+  font-family: 'Rubik', sans-serif;
+  font-style: italic;
+}
+
+%svg-color {
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+
+%pseudo {
+  position: absolute;
+  content: '';
+  display: block;
+}
+
+%pseudo-y {
+  position: absolute;
+  content: '';
+  display: block;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+%pseudo-xy {
+  position: absolute;
+  content: '';
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+%checkbox-hidden {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
+}

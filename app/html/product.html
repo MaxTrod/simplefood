@@ -1,0 +1,22 @@
+@include('components/_head.html', {
+"pageTitle" : "Страница продукта"
+})
+
+@include('components/_header.html', {
+"link":"2"
+})
+
+<main class="page" id="product-page">
+  @include('components/_breadcrumbs.html')
+
+  @include('page-product/_product-section.html')
+
+  @include('page-product/_product-recent.html')
+
+
+</main>
+
+
+@include('components/_footer.html')
+
+@include('components/_scripts.html')

@@ -1,0 +1,54 @@
+.best-restaurants {
+  &__items {
+    min-width: 0;
+  }
+
+  // .best-restaurants__title
+  &__title {
+    margin-bottom: 45px;
+
+    @include mq('tablet-2') {
+      margin-bottom: 37px;
+    }
+
+    @include mq('tablet') {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__slider {
+    height: 100%;
+  }
+
+  &__wrapper {
+    height: 859px;
+    // height: 868px;
+
+    @include mq('tablet-2') {
+      margin-bottom: 30px;
+      height: 415px;
+    }
+  }
+
+  &__slide {
+    height: 100%;
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: center;
+
+    @include mqm('tablet-2') {
+      display: none;
+    }
+  }
+}
+
+.swiper-grid-column>.best-restaurants__wrapper {
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.swiper-grid>.best-restaurants__wrapper {
+  flex-wrap: wrap;
+}

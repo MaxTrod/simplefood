@@ -1,0 +1,101 @@
+.contacts-menu {
+  display: grid;
+  row-gap: 15px;
+
+  @include mq('tablet') {
+    row-gap: 6px;
+  }
+
+  // .contacts-menu__link
+  &__link {
+    display: inline-block;
+    line-height: 2;
+    font-size: 16px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    column-gap: 7px;
+    transition: box-shadow 0.3s, color 0.3s;
+
+    @include mq('tablet') {
+      line-height: 2.6;
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+      stroke: $main;
+      fill: transparent;
+      stroke-width: 1.5px;
+      transition: stroke 0.3s;
+    }
+
+
+    &:focus {
+      box-shadow: 0 0 0 2px rgba($accent, 0.7);
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $accent;
+
+        svg {
+          stroke: $accent;
+        }
+      }
+    }
+
+    &:active {
+      box-shadow: none;
+    }
+  }
+
+  // .contacts-menu__social
+  &__social {
+    display: flex;
+    column-gap: 13px;
+  }
+
+  // .contacts-menu__social-link
+  &__social-link {
+    width: 40px;
+    height: 40px;
+    background-color: $bg-secondary;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, box-shadow 0.3s;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      fill: $main;
+      transition: fill 0.3s;
+    }
+
+    &:focus {
+      background-color: rgba($accent, 0.1);
+      box-shadow: 0 0 0 2px rgba($accent, 0.7);
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: $accent;
+        box-shadow: none;
+
+        svg {
+          fill: $icon;
+        }
+      }
+    }
+
+    &:active {
+      background-color: $icon-secondary;
+
+      svg {
+        fill: $accent;
+      }
+    }
+  }
+}

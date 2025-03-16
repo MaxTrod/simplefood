@@ -1,0 +1,271 @@
+.popular-categories {
+  text-align: center;
+
+  // .categories__header
+  &__header {
+    margin-bottom: 38px;
+
+    @include mq('tablet-2') {
+      margin-bottom: 30px;
+    }
+
+    @include mq('tablet') {
+      margin-bottom: 23px;
+    }
+  }
+
+  &__content {
+    margin-bottom: 60px;
+
+    @include mq('tablet-2') {
+      margin-bottom: 45px;
+    }
+
+    @include mq('tablet') {
+      margin-bottom: 15px;
+    }
+  }
+
+  // .categories__title
+  &__title {
+    margin-bottom: 62px;
+
+    @include mq('tablet-2') {
+      margin-bottom: 41px;
+    }
+
+    @include mq('tablet') {
+      margin-bottom: 25px;
+    }
+  }
+
+  // .categories__tab
+  &__tab {
+    display: none;
+
+    &.active-tab {
+      display: block;
+      animation: scaleIn 0.7s;
+    }
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+
+    @include mq('tablet-2') {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    @include mq('tablet') {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    @include mq('phone') {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 5px;
+      row-gap: 10px;
+    }
+  }
+
+  &__link {
+    @include mq('tablet') {
+      font-size: 20px;
+    }
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0.3;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.nav-popular-categories {
+  display: flex;
+  flex-wrap: nowrap;
+  column-gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+
+  @include mq('tablet-2') {
+    column-gap: 12px;
+  }
+
+  @include mq('tablet') {
+    column-gap: 6px;
+  }
+
+  &__button {
+    margin: 2px;
+    flex: 0 0 auto;
+  }
+
+  // .nav-categories__item
+  &__button {
+    background-color: $icon;
+    box-shadow: 0 0 0 1px $bg-secondary;
+    padding: 22px 30px;
+    border-radius: 5px;
+
+    // 10 16
+    @include mq('tablet-2') {
+      padding: 15px 24px;
+    }
+
+    @include mq('tablet') {
+      padding: 12px 16px;
+    }
+
+    span {
+      color: $title;
+      padding-left: 54px;
+      position: relative;
+      font-size: 20px;
+
+      @include mq('tablet-2') {
+        font-size: 18px;
+        padding-left: 45px;
+      }
+
+      @include mq('tablet') {
+        padding-left: 25px;
+      }
+
+      @include mq('tablet') {
+        font-size: 14px;
+      }
+
+      &::before {
+        @extend %pseudo-y;
+        width: 44px;
+        height: 44px;
+        background-color: $title;
+        @extend %svg-color;
+
+        @include mq('tablet-2') {
+          width: 37px;
+          height: 37px;
+        }
+
+        @include mq('tablet') {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+
+    &--burger {
+      span {
+        &::before {
+          -webkit-mask-image: url('../images/sprite.svg#icon-category-burger');
+          mask-image: url('../images/sprite.svg#icon-category-burger');
+        }
+      }
+    }
+
+    &--pizza {
+      span {
+        &::before {
+          -webkit-mask-image: url('../images/sprite.svg#icon-category-pizza');
+          mask-image: url('../images/sprite.svg#icon-category-pizza');
+        }
+      }
+    }
+
+    &--sandwich {
+      span {
+        &::before {
+          -webkit-mask-image: url('../images/sprite.svg#icon-category-sandvich');
+          mask-image: url('../images/sprite.svg#icon-category-sandvich');
+        }
+      }
+    }
+
+    &--asianfood {
+      span {
+        &::before {
+          -webkit-mask-image: url('../images/sprite.svg#icon-category-asia');
+          mask-image: url('../images/sprite.svg#icon-category-asia');
+        }
+      }
+    }
+
+    &--sets {
+      span {
+        &::before {
+          -webkit-mask-image: url('../images/sprite.svg#icon-category-dish');
+          mask-image: url('../images/sprite.svg#icon-category-dish');
+        }
+      }
+    }
+
+    &.active-tab {
+      background-color: $accent;
+
+      span {
+        color: $icon;
+
+        &::before {
+          background-color: $icon;
+        }
+      }
+
+      &:focus {
+        background-color: $accent;
+
+        span {
+          &::before {
+            background-color: $icon;
+          }
+        }
+      }
+
+      @media (any-hover: hover) {
+        &:hover {
+          span {
+            color: $icon;
+          }
+        }
+      }
+    }
+
+    &:focus {
+      background-color: $icon;
+
+      span {
+        &::before {
+          background-color: $title;
+        }
+      }
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: rgba($accent, 0.1);
+
+        span {
+          color: $accent;
+        }
+      }
+    }
+
+    &:active {
+      background-color: $icon;
+      box-shadow: inset 0 -5px 12px 0 rgba($accent, 0.2);
+
+      span {
+        color: $title;
+      }
+    }
+  }
+}

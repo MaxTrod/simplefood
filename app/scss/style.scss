@@ -1,0 +1,56 @@
+@import 'reset';
+@import 'fonts';
+@import 'vars';
+@import 'global';
+@import 'mixin';
+@import 'libs';
+
+/*--------------------------------------------------*/
+@import 'components/header';
+
+@import 'components/close-button';
+
+@import 'components/contacts-menu';
+/*------------------------------------------------*/
+
+
+@import 'components/breadcrumbs';
+
+/*------------------------------------------------*/
+@import 'components/pagination';
+
+/*--------------------------------------------------*/
+@import 'page-main/hero';
+
+/*--------------------------------------------------*/
+@import 'page-main/popular-categories';
+
+@import 'components/tab-card';
+
+/*--------------------------------------------------*/
+@import 'page-main/features';
+
+/*--------------------------------------------------*/
+@import 'page-main/best-restaurants';
+
+@import 'components/restaurant-card';
+
+/*--------------------------------------------------*/
+@import 'page-main/clients-reviews';
+
+/*--------------------------------------------------*/
+@import 'components/mobile-app';
+
+/*--------------------------------------------------*/
+@import 'components/footer';
+
+/*-------------------------------------------------------------*/
+@import 'page-catalog/catalog';
+
+/*-----АКЦИИ И СКИДКИ-------------------------------------------------------------*/
+@import 'page-catalog/promo';
+
+/*-----СТРАНИЦА ПРОДУКТ-------------------------------------------------------------*/
+@import 'page-product/product-section';
+
+@import 'page-product/product-recent';
